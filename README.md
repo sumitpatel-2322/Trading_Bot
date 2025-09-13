@@ -60,6 +60,9 @@ pip install -r requirements.txt
 ```env
 BINANCE_API_KEY=your_testnet_api_key
 BINANCE_API_SECRET=your_testnet_secret
+
+TESTNET=True
+LOG_LEVEL=INFO
 ```
 
 
