@@ -31,8 +31,8 @@ def print_banner():
 ║                                                              ║
 ║        🚀 BINANCE FUTURES TRADING BOT 🚀                    ║
 ║                                                              ║
-║        Testnet Trading Bot for Hiring Task                  ║
-║        Supports Market & Limit Orders                       ║
+║        Testnet Trading Bot for Hiring Task                   ║
+║        Supports Market & Limit Orders                        ║
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝
 """
