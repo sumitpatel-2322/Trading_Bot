@@ -1,4 +1,4 @@
-"""
+r'''
 BasicBot - Binance Futures Testnet helper
 
 This module implements BasicBot which wraps Binance Python SDK calls
@@ -26,7 +26,7 @@ python src\ui\cli.py --cancel --symbol BTCUSDT --order-id 12345
 
 # Get current price
 python src\ui\cli.py --price-check --symbol BTCUSDT
-"""
+'''
 
 from binance.client import Client
 import os
@@ -47,7 +47,7 @@ from utils.exceptions import (
 load_dotenv()
 
 class BasicBot:
-    """
+    r"""
     Basic Trading Bot for Binance Futures Testnet
 
     This class provides small, well-documented helpers:
@@ -64,7 +64,7 @@ class BasicBot:
     """
     
     def __init__(self, api_key=None, api_secret=None, testnet=True):
-        """Initialize the trading bot with API credentials.
+        r"""Initialize the trading bot with API credentials.
 
         Raises:
             ValueError: if API credentials are missing.
@@ -91,7 +91,7 @@ class BasicBot:
     
     @retry_api_call(max_retries=3, delay=1)
     def test_connection(self):
-        """Test connection to Binance.
+        r"""Test connection to Binance.
 
         Performs a minimal set of API calls (server time + account fetch)
         to ensure the API key/secret are valid and permissions are correct.
@@ -114,7 +114,7 @@ class BasicBot:
     
     @retry_api_call(max_retries=3, delay=1)
     def get_account_balance(self):
-        """Get futures account balance.
+        r"""Get futures account balance.
 
         Returns:
             list: Raw balance entries from Binance futures_account_balance.
@@ -132,7 +132,7 @@ class BasicBot:
     
     @retry_api_call(max_retries=3, delay=1)
     def place_market_order(self, symbol, side, quantity):
-        """
+        r"""
         Place a market order.
 
         Args:
@@ -186,7 +186,7 @@ class BasicBot:
     
     @retry_api_call(max_retries=3, delay=1)
     def place_limit_order(self, symbol, side, quantity, price):
-        """
+        r"""
         Place a limit order.
 
         Args:
@@ -247,7 +247,7 @@ class BasicBot:
     
     @retry_api_call(max_retries=3, delay=1)
     def get_open_orders(self, symbol=None):
-        """
+        r"""
         Get open orders.
 
         Args:
@@ -277,7 +277,7 @@ class BasicBot:
     
     @retry_api_call(max_retries=3, delay=1)
     def cancel_order(self, symbol, order_id):
-        """
+        r"""
         Cancel an order.
 
         Args:
@@ -317,7 +317,7 @@ class BasicBot:
 
     @retry_api_call(max_retries=3, delay=1)
     def get_symbol_info(self, symbol):
-        """
+        r"""
         Get trading symbol information (for precision, min quantity, etc.)
 
         Args:
@@ -348,7 +348,7 @@ class BasicBot:
             raise
 
     def get_current_price(self, symbol):
-        """
+        r"""
         Get current price for a symbol.
 
         Args:
